@@ -1,0 +1,6 @@
+fun stein_gcd(a,b,c)=
+     	if(a=b) then a*c
+	else if(a mod 2 = 0 andalso b mod 2=0) then stein_gcd(a div 2, b div 2, 2*c) 
+	else if(a mod 2 = 0 ) then stein_gcd(a div 2, b , c)
+	else if(b mod 2 = 0 ) then stein_gcd(a , b div 2 , c)
+	else stein_gcd(abs (a-b) , Int.min(a,b) , c);
